@@ -18,13 +18,39 @@ public class Runner {
     
     public static void main(String[] args) {
         
-//        tblmusteriDAO db = new tblmusteriDAO();
-//        
-//        tblmusteri mst = new tblmusteri();
-//        mst.setAd("Muhammet ");
-//        
-//        db.kaydet(mst);
-//        
+        tblmusteriDAO db = new tblmusteriDAO();
+        
+        tblmusteri mst;
+        mst = new tblmusteri();
+       
+        mst.setSoyad("Kar");
+        mst.setAdres("Ankara");
+        mst.setTelefon("0 555 666 66 55");
+        if(db.kaydet(mst))
+            System.out.println("Kayıt Yapıldı");
+            else
+            System.err.println("Kayıt Yapılamadı");
+                
+        
+        mst = new tblmusteri();
+        mst.setAd("Ali ");
+        mst.setSoyad("turan");
+        mst.setAdres("İstanbul");
+        mst.setTelefon("0 444 666 66 55");
+        if(db.kaydet(mst))
+            System.out.println("Kayıt Yapıldı");
+            else
+            System.err.println("Kayıt Yapılamadı");
+        
+        mst = new tblmusteri();
+        mst.setAd("Sevim ");
+        mst.setSoyad("Meral");
+        mst.setAdres("Bursa");
+        mst.setTelefon("0 222 666 66 55");
+         if(db.kaydet(mst))
+            System.out.println("Kayıt Yapıldı");
+            else
+            System.err.println("Kayıt Yapılamadı");
 //        
 //        tblpersonelDAO dbp = new tblpersonelDAO();
 //        
@@ -47,12 +73,16 @@ public class Runner {
 //           else
 //               System.out.println("Bulunan Kayıt...:  "+db.bul(2, new tblmusteri()).getAd());
 
+//
+//            tblmusteriDAO db = new tblmusteriDAO();
+//            
+//            for (tblmusteri item : db.ara("ad", "h", new tblmusteri())) {
+//                System.out.println("Bulunan KAyıt....: "+item.getAd());
+//        }
 
-            tblmusteriDAO db = new tblmusteriDAO();
-            
-            for (tblmusteri item : db.ara("ad", "h", new tblmusteri())) {
-                System.out.println("Bulunan KAyıt....: "+item.getAd());
-        }
+        
+     
+          
 
             
         

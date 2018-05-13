@@ -5,6 +5,7 @@
  */
 package com.vb.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -25,8 +26,13 @@ public class tblmusteri {
             allocationSize = 1, initialValue = 1)
     @GeneratedValue(generator ="sq_tblmusteri" )
     private int id;
+    @Column(nullable = false)
     private String ad;
-
+    private String soyad;
+    private String telefon;
+    private String adres;
+    private int okulno;
+    
     public int getId() {
         return id;
     }
@@ -41,6 +47,38 @@ public class tblmusteri {
 
     public void setAd(String ad) {
         this.ad = ad;
+    }
+
+    public String getSoyad() {
+        return soyad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+
+    public String getTelefon() {
+        return telefon;
+    }
+
+    public void setTelefon(String telefon) {
+        this.telefon = telefon;
+    }
+
+    public String getAdres() {
+        return adres;
+    }
+
+    public void setAdres(String adres) {
+        this.adres = adres;
+    }
+
+    public int getOkulno() {
+        return okulno;
+    }
+
+    public void setOkulno(int okulno) {
+        this.okulno = okulno;
     }
     
     

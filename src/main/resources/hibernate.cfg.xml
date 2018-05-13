@@ -45,13 +45,14 @@ Contributor(s):
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/ornek</property>
     <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.password">postgres</property>
     
     <property name="hibernate.hbm2ddl.auto">update</property> 
     <property name="hibernate.show_sql">true</property>
     
     <mapping class="com.vb.models.tblmusteri"></mapping>
     <mapping class="com.vb.models.tblpersonel"></mapping>
+    <mapping class="com.vb.models.tbllog"></mapping>
     
     
     
